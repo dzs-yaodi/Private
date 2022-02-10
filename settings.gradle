@@ -1,0 +1,3 @@
+rootProject.name = "Private"
+include ':app'
+include ':privateLib'
