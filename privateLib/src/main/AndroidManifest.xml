@@ -3,8 +3,9 @@
     package="com.xw.privatelib">
 
     <application>
-
-        <activity android:name=".ui.ProtectWebActivity"/>
-        <activity android:name=".ui.WebViewActivity"/>
+        <activity android:name=".ui.ReportActivity"></activity>
+        <activity android:name=".ui.ProtectWebActivity" />
+        <activity android:name=".ui.WebViewActivity" />
     </application>
+
 </manifest>

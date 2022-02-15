@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.ReportActivity">
+
+    <FrameLayout
+        android:id="@+id/frame_contaner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:background="#000">
+
+        <ImageView
+            android:id="@+id/image_back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_back_white"
+            android:padding="12dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Report"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:layout_gravity="center"
+            />
+        <TextView
+            android:id="@+id/tv_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="send"
+            android:textColor="@color/white"
+            android:layout_gravity="end|center_vertical"
+            android:paddingEnd="12dp"
+            />
+    </FrameLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="What's the reason for this report?"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:layout_margin="12dp"
+        />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:text="Scammer/Spammer"
+            android:drawableEnd="@drawable/radio_report_bg_select"
+            android:checked="true"
+            android:textColor="#807878"
+            />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:text="Fake/Fraudulent account"
+            android:drawableEnd="@drawable/radio_report_bg_select"
+            android:layout_marginTop="10dp"
+            android:textColor="#807878"
+            />
+
+        <RadioButton
+            android:id="@+id/radio3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:text="Abusive/Violent violation"
+            android:drawableEnd="@drawable/radio_report_bg_select"
+            android:layout_marginTop="10dp"
+            android:textColor="#807878"
+            />
+
+        <RadioButton
+            android:id="@+id/radio4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:text="Porn/Copyright photo"
+            android:drawableEnd="@drawable/radio_report_bg_select"
+            android:layout_marginTop="10dp"
+            android:textColor="#807878"
+            />
+
+        <RadioButton
+            android:id="@+id/radio5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:text="Underage"
+            android:drawableEnd="@drawable/radio_report_bg_select"
+            android:layout_marginTop="10dp"
+            android:textColor="#807878"
+            />
+
+        <RadioButton
+            android:id="@+id/radio6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:text="Wrong gender"
+            android:drawableEnd="@drawable/radio_report_bg_select"
+            android:layout_marginTop="10dp"
+            android:textColor="#807878"
+            />
+
+        <RadioButton
+            android:id="@+id/radio7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:text="Other"
+            android:drawableEnd="@drawable/radio_report_bg_select"
+            android:layout_marginTop="10dp"
+            android:textColor="#807878"
+            />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Describe details"
+        android:textColor="@color/black"
+        android:layout_margin="12dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_report_bg"
+        android:lines="5"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        />
+
+</LinearLayout>
