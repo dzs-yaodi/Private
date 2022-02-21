@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.Button;
 
 import com.xw.privatelib.ManagerDialog;
+import com.xw.privatelib.ui.FeedbackActivity;
 import com.xw.privatelib.ui.ReportActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,12 +18,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button btn = findViewById(R.id.btn);
-        ManagerDialog managerDialog = new ManagerDialog(this);
 
         btn.setOnClickListener(v -> {
-//            Intent intent = new Intent(this, ReportActivity.class);
-//            startActivity(intent);
-            managerDialog.showPopupwindow(btn);
+            Intent intent = new Intent(this, FeedbackActivity.class);
+            intent.putExtra("theme_color","#FFBB86FC");
+            startActivity(intent);
         });
     }
 }
