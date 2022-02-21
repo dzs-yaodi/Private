@@ -1,6 +1,8 @@
 package com.xw.privatelib.data;
 
-public class ChatUser {
+import java.io.Serializable;
+
+public class ChatUser implements Serializable {
 
     public String name;
 
