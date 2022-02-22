@@ -10,6 +10,7 @@ import com.xw.privatelib.ManagerDialog;
 import com.xw.privatelib.ui.ChatActivity;
 import com.xw.privatelib.ui.FeedbackActivity;
 import com.xw.privatelib.ui.ReportActivity;
+import com.xw.privatelib.ui.SettingActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         Button btn = findViewById(R.id.btn);
 
         btn.setOnClickListener(v -> {
-            Intent intent = new Intent(this, ReportActivity.class);
+            Intent intent = new Intent(this, SettingActivity.class);
             intent.putExtra("theme_color","#FFBB86FC");
             startActivity(intent);
         });
