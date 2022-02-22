@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.Button;
 
 import com.xw.privatelib.ManagerDialog;
+import com.xw.privatelib.ui.ChatActivity;
 import com.xw.privatelib.ui.FeedbackActivity;
 import com.xw.privatelib.ui.ReportActivity;
 
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         Button btn = findViewById(R.id.btn);
 
         btn.setOnClickListener(v -> {
-            Intent intent = new Intent(this, FeedbackActivity.class);
+            Intent intent = new Intent(this, ReportActivity.class);
             intent.putExtra("theme_color","#FFBB86FC");
             startActivity(intent);
         });

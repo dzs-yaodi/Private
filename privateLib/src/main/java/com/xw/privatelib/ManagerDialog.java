@@ -25,7 +25,7 @@ public class ManagerDialog {
         this.callBack = callBack;
     }
 
-    public void showPopupwindow(View view) {
+    public void showPopupwindow(View view,String themeColor) {
 
         if (popupWindow == null) {
 
@@ -35,6 +35,7 @@ public class ManagerDialog {
 
             tv_report.setOnClickListener(v -> {
                 Intent intent = new Intent(context, ReportActivity.class);
+                intent.putExtra("theme_color",themeColor);
                 context.startActivity(intent);
                 popupWindow.dismiss();
             });
