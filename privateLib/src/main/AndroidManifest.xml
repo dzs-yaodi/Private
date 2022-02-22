@@ -4,7 +4,22 @@
 
     <application>
 
-        <activity android:name=".ui.ProtectWebActivity"/>
-        <activity android:name=".ui.WebViewActivity"/>
+        <activity android:name=".ui.ReportActivity"></activity>
+        <activity android:name=".ui.ProtectWebActivity" />
+        <activity android:name=".ui.WebViewActivity" />
+        <activity android:name=".ui.FeedbackActivity"/>
+        <activity android:name=".ui.ChatActivity"/>
+
+        <provider
+            android:name=".ui.PrivateFileProvider"
+            android:authorities="${applicationId}.ui.FcFileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
     </application>
+
 </manifest>

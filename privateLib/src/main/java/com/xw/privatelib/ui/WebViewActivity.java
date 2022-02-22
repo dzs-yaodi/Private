@@ -64,7 +64,7 @@ public class WebViewActivity extends AppCompatActivity {
         mAgentWeb = AgentWeb.with(this)
                 .setAgentWebParent((ViewGroup) frameLayout, new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
                         ViewGroup.LayoutParams.MATCH_PARENT))
-                .useDefaultIndicator()
+                .closeIndicator()
                 .setWebViewClient(webViewClient)
                 .setWebChromeClient(mOpenFileWebChromeClient)
                 .setSecurityType(AgentWeb.SecurityType.STRICT_CHECK)
