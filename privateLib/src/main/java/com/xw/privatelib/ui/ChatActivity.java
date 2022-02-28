@@ -1,5 +1,6 @@
 package com.xw.privatelib.ui;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.EditText;
@@ -38,7 +39,6 @@ public class ChatActivity extends BaseActivity {
         setContentView(R.layout.activity_chat);
 
         FrameLayout frame_container = findViewById(R.id.frame_container);
-
         ImageView image_back = findViewById(R.id.image_back);
         image_back.setOnClickListener(v -> finish());
 
@@ -50,6 +50,12 @@ public class ChatActivity extends BaseActivity {
 
         String themeColor = getIntent().getStringExtra("theme_color");
         sqlString = getIntent().getStringExtra("sql_string");
+        String type = getIntent().getStringExtra("type");
+        if ("white".equals(type)) {
+            image_back.setImageResource(R.drawable.img_back_black);
+            tv_name.setTextColor(Color.BLACK);
+        }
+
         UITools.initTitleColorBar(this, frame_container, themeColor);
         ChatUser model = (ChatUser) getIntent().getSerializableExtra("data");
 
