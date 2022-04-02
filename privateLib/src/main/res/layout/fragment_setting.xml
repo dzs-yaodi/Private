@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/linear_main"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="78dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Settings"
+            android:textSize="24dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            />
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/tv_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Service Agreement"
+        android:padding="6dp"
+        android:drawableEnd="@drawable/image_right"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#ACABAB"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_Privacy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Privacy Policy"
+        android:padding="6dp"
+        android:drawableEnd="@drawable/image_right"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:gravity="center_vertical"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#ACABAB"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delect Account"
+        android:padding="6dp"
+        android:drawableEnd="@drawable/image_right"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:gravity="center_vertical"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#ACABAB"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
+        />
+</LinearLayout>
