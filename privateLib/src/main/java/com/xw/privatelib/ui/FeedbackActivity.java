@@ -15,13 +15,14 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
+import com.sobey.matisse.Matisse;
+import com.sobey.matisse.MimeType;
+import com.sobey.matisse.engine.impl.GlideEngine;
+import com.sobey.matisse.internal.entity.CaptureStrategy;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 import com.xw.privatelib.R;
+import com.xw.privatelib.utils.Glide4Engine;
 import com.xw.privatelib.utils.UITools;
-import com.xw.selector.MediaSelector;
-import com.xw.selector.MimeType;
-import com.xw.selector.engine.GlideEngine;
-import com.xw.selector.entity.CaptureStrategy;
 
 import java.util.List;
 
@@ -65,14 +66,14 @@ public class FeedbackActivity extends BaseActivity {
                         if (!granted) {
                             Toast.makeText(this, "Please enable the necessary permissions", Toast.LENGTH_SHORT).show();
                         } else {
-                            MediaSelector
-                                    .create(this)
+                            Matisse.from(this)
                                     .choose(MimeType.ofImage())
-                                    .showCamera(true)
-                                    .captureStrategy(new CaptureStrategy(true,getPackageName() +  ".ui.FcFileProvider"))
+                                    .showSingleMediaType(true)
+                                    .capture(true)
+                                    .captureStrategy(new CaptureStrategy(true,getPackageName() + ".ui.FcFileProvider"))
                                     .maxSelectable(1)
-                                    .imageEngine(new GlideEngine())
-                                    .start(REQUEST_IMAGE);
+                                    .imageEngine(new Glide4Engine())
+                                    .forResult(REQUEST_IMAGE);
                         }
                     });
         });
@@ -92,7 +93,7 @@ public class FeedbackActivity extends BaseActivity {
 
 
         if (requestCode == REQUEST_IMAGE && resultCode == RESULT_OK && data != null) {
-            List<String> pathList = MediaSelector.obtainPathsResult(data);
+            List<String> pathList = Matisse.obtainPathResult(data);
             if (pathList.size() > 0 && !TextUtils.isEmpty(pathList.get(0))) {
                 String path = pathList.get(0);
                 Bitmap bitmap = BitmapFactory.decodeFile(path);

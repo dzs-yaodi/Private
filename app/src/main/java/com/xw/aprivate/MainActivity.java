@@ -24,10 +24,10 @@ public class MainActivity extends AppCompatActivity {
         Button btn = findViewById(R.id.btn);
 
         btn.setOnClickListener(v -> {
-//            Intent intent = new Intent(this, FeedbackActivity.class);
-//            intent.putExtra("theme_color","#ffffff");
-//            intent.putExtra("type","white");
-            Intent intent = new Intent(this,MainActivity2.class);
+            Intent intent = new Intent(this, FeedbackActivity.class);
+            intent.putExtra("theme_color","#ffffff");
+            intent.putExtra("type","white");
+//            Intent intent = new Intent(this,MainActivity2.class);
             startActivity(intent);
         });
     }
