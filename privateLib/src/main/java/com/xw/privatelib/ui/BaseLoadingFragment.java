@@ -7,26 +7,26 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.xw.privatelib.MDProgressDialog;
+import com.xw.privatelib.LoadingDialog;
 import com.xw.privatelib.utils.SharePrefrenceUtils;
 
-public class BaseFragment extends Fragment {
+public class BaseLoadingFragment extends Fragment {
 
-    protected MDProgressDialog mdProgressDialog;
     protected SharePrefrenceUtils utils;
+    protected LoadingDialog loadingDialog;
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mdProgressDialog = new MDProgressDialog(view.getContext());
+        loadingDialog = new LoadingDialog(view.getContext());
         utils = new SharePrefrenceUtils(view.getContext());
     }
 
     @Override
     public void onDestroyView() {
-        if (mdProgressDialog != null) {
-            mdProgressDialog.cancel();
+        if (loadingDialog != null) {
+            loadingDialog.cancel();
         }
         super.onDestroyView();
     }
