@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.Priority;
 import com.bumptech.glide.request.RequestOptions;
-import com.sobey.matisse.engine.ImageEngine;
+import com.zhihu.matisse.engine.ImageEngine;
 
 public class Glide4Engine implements ImageEngine {
 

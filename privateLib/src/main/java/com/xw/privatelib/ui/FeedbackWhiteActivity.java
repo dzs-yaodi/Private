@@ -15,13 +15,13 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
-import com.sobey.matisse.Matisse;
-import com.sobey.matisse.MimeType;
-import com.sobey.matisse.internal.entity.CaptureStrategy;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 import com.xw.privatelib.R;
 import com.xw.privatelib.utils.Glide4Engine;
 import com.xw.privatelib.utils.UITools;
+import com.zhihu.matisse.Matisse;
+import com.zhihu.matisse.MimeType;
+import com.zhihu.matisse.internal.entity.CaptureStrategy;
 
 import java.util.List;
 
