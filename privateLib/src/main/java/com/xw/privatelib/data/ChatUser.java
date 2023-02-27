@@ -11,4 +11,14 @@ public class ChatUser implements Serializable {
     public Integer imageHead;
 
     public String about;
+
+    public String time;
+
+    public String reserve1;
+
+    public String reserve2;
+
+    public String reserve3;
+
+
 }

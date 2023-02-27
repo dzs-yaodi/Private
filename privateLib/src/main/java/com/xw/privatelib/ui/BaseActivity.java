@@ -20,6 +20,7 @@ public class BaseActivity extends AppCompatActivity {
         AtyContainer.getInstance().addActivity(this);
         mdProgressDialog = new MDProgressDialog(this);
         utils = new SharePrefrenceUtils(this);
+
     }
 
     @Override
